@@ -103,7 +103,7 @@ height: 40px;
 
 .nav-links li a {
   text-decoration: none;
-  color: #fff;
+  color: #333;
   font-size: 1.2rem;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -204,7 +204,7 @@ height: 40px;
     position: static;
     height: auto;
     width: auto;
-    background: #333;;
+    background: #ffffff;;
     box-shadow: none;
     padding: 0 30px;
   }
@@ -240,18 +240,65 @@ height: 40px;
 
 /* Home section */
 .home {
+    position: relative;
     padding: 80px 10%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    background-color: #f9f9f9; /* clean light background */
+    background: url('/Assets/Images/neakasa-Eh5UBnRR3GI-unsplash.jpg') center center/cover no-repeat;
+    min-height: 100vh;
+    
+}
+
+/* Overlay  */
+.home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.601); /* dark overlay */
+    z-index: 1;
+}
+
+/* Ensure content is above overlay */
+.home-text,
+.home-pic {
+    position: relative;
+    z-index: 2;
+}
+
+/* Light text colors for contrast */
+.home-text h2,
+.home-text h1,
+.home-text p {
+    color: #fff;
+}
+
+.home-text h1 {
+    color: #ffcc00; /* highlight stays yellow */
+}
+
+.home .cta {
+    background: #ffcc00;
+    color: #222;
+}
+
+.home .cta:hover {
+    background: #fff;
+    color: #222;
 }
 
 /* Text styling */
 .home-text {
+    background: #d2cacaa1;
+    padding: 60px 20px;
+    /* margin: 50px auto; */
+    max-width: 900px;
+    border-radius: 20px; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     flex: 1;
     max-width: 600px;
+
 }
 
 .home-text h2 {
@@ -367,7 +414,7 @@ height: 40px;
     }
 
     .home-text h1 {
-        color: #ffcc00;
+        color: #ffffff;
     }
 
     .home-text .cta {
