@@ -246,7 +246,7 @@ height: 40px;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    background: url('/Assets/Images/neakasa-Eh5UBnRR3GI-unsplash.jpg') center center/cover no-repeat;
+    background: url('../Images/neakasa-Eh5UBnRR3GI-unsplash.jpg') center center/cover no-repeat;
     min-height: 100vh;
     
 }
